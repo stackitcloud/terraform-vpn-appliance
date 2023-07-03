@@ -1,0 +1,61 @@
+MultiCloud:{
+    shape: image
+    icon: https://styleguide.stackit.schwarz/imagery/operation-on-site.svg
+}
+
+OnPrem:{
+    shape: image
+    icon: https://styleguide.stackit.schwarz/imagery/company.svg
+}
+
+MultiCloud -> Project 1.VPN Appliance
+OnPrem -> Project 1.VPN Appliance
+
+Project 1:{
+    style: {
+        stroke: black
+        font-color: "#004E5A"
+        fill: "#F8EC17"
+        opacity: 0.8
+    }
+    VPN Appliance:{
+        style: {
+            stroke: black
+            font-color: "#004E5A"
+            fill: "#F8EC17"
+            opacity: 1
+        }
+        IPSec:{
+            shape: image
+            icon: https://styleguide.stackit.schwarz/imagery/security-groups.svg
+        }
+        Routing:{
+            shape: image
+            icon: https://styleguide.stackit.schwarz/imagery/routers.svg
+        }
+        Cloud Connect:{
+            shape: image
+            icon: https://styleguide.stackit.schwarz/imagery/cloud-hiperscale.svg
+        }
+    }
+    Web:{
+        shape: image
+        icon: https://styleguide.stackit.schwarz/assets/imagery/virtual-machine.svg
+    }
+    App:{
+        shape: image
+        icon: https://styleguide.stackit.schwarz/assets/imagery/virtual-machine.svg
+    }
+    DB:{
+        shape: image
+        icon: https://styleguide.stackit.schwarz/assets/imagery/virtual-machine.svg
+    }
+    Network:{
+        shape:image
+        icon:https://styleguide.stackit.schwarz/assets/imagery/networks.svg
+    }
+    VPN Appliance -> Network
+    Network -> Web
+    Network -> App
+    Network -> DB
+}
