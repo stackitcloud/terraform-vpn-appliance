@@ -1,7 +1,7 @@
 # STACKIT VPN Appliance Terraform Deployment
 Hier enthalten sind die Deployment Scripts für Terraform.
 
-<img width="60%" src="overview.svg">
+![](overview.svg)
 
 Zum Netzwerksetup werden zwei VPC Netzwerke angelegt `vpc_network` und `wan_network` das Subnetz des VPC Netzwerks kann frei gesetzt werden. Für das WAN Network ist die Netzwerkrange `100.96.96.0/25` vorgegeben. Hierbei sollte es aber zu keinen Kollisionen kommen, da dieses Netzwerk nur für die Eingehende Verbindungen zur VPN Appliance verwendet werden.
 Für jedes der beiden Netzwerke werden zusätzlich noch Router erstellt. Diese stellen zum einen eine NAT Internetverbindung her und diesen zum anderen für das Binden von FloatingIPs und das Routing der Remote VPN Netzwerke an die VPN Appliance.
