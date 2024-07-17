@@ -1,5 +1,8 @@
 #!/bin/bash
 
+systemctl restart --no-block apache2
+systemctl start --no-block sshd
+
 #
 # Update System to latest state
 #
@@ -12,6 +15,3 @@ DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 #
 #a2dissite proxy
 #a2ensite proxy-auth
-
-systemctl restart apache2
-systemctl start sshd
