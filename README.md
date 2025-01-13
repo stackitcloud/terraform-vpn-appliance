@@ -40,7 +40,11 @@ the selection of the Availability Zone or the VM size (flavor) can be determined
     ```bash
     source .env
     ```
-1. Launch Terrafrom
+2. Init Terraform
+    ```bash
+    terraform init
+    ```
+3. Launch Terrafrom
     ```bash
     terraform apply
     ```
